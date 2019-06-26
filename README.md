@@ -13,6 +13,8 @@ Architecting on AWS
 3. AWS 계정 루트로 로그인 한다.
 4. IAM 사용자에게 인라인 정책으로 다음 AssumRole 정책을 할당한다.
 
+```JSON
+
 {
   "Version": "2012-10-17",
   "Statement": {
@@ -21,6 +23,9 @@ Architecting on AWS
     "Resource": "arn:aws:iam::507815402614:role/s3*"
   }
 }
+
+```
+
 
 5. 역할(Role)을 생성한다. (S3FullAccess 권한 할당)
    역할만들기 --> 다른AWS계정 선택 --> 계정ID 입력 --> 정책필터에 s3 입력해서 AmazonS3FullAccess 정책 선택
